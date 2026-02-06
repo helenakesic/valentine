@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 0 10px;
+    position: relative;
+    z-index: 3;
+}
+
+#yes {
+    background: #ff4d6d;
+    color: white;
+}
+
+#no {
+    background: #ccc;
+    color: black;
+}
+
+.heart {
+    position: fixed;
+    color: #ff4d6d;
+    font-size: 25px;
+    animation: floatUp 1.5s ease-out forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), -200px) scale(1.5);
+    }
+}
